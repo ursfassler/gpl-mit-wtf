@@ -1,0 +1,14 @@
+*.aux
+*.bbl
+*.blg
+*.log
+*.nav
+*.out
+*.snm
+*.synctex.gz
+*.toc
+*.vrb
+gpl_mit_wtf*.pdf
+slide.pdf
+handout.pdf
+

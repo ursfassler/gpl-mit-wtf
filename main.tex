@@ -1,0 +1,407 @@
+\usepackage[utf8x]{inputenc}
+\usepackage{ucs}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{appendixnumberbeamer}
+\usepackage{url}
+
+\title{GPL, MIT, ..., WTF?}
+%\subtitle{}
+\author{Urs Fässler}
+\date{26.11.2015}
+\institute
+{
+  LinuxDay Dornbirn
+}
+%\subject{}
+
+\newcounter{todonr}
+\newcommand{\todo}[1]{{\color{red}TODO \arabic{todonr}: #1\stepcounter{todonr}}}
+
+\newcommand{\hnote}[1]{\only<handout>{\footnote{#1}}}
+\newcommand{\hcite}[1]{\only<handout>{\cite{#1}}}
+\bibliographystyle{plainurl}  % urlbst
+\setbeamertemplate{bibliography item}{[\theenumiv]}
+
+\usetheme{Luebeck}
+
+% remove navigation bars
+\beamertemplatenavigationsymbolsempty
+
+% remove section information
+\setbeamertemplate{headline}{}
+
+\begin{document}
+
+\frame{\titlepage}
+
+%\section{Einführung}
+\section{Intro}
+\note
+{
+  \begin{itemize}
+    \item Teaser: "Kunstwerk erstellen"
+  \end{itemize}
+}
+
+\section{Thema}
+\note
+{
+  \begin{itemize}
+    \item Eine Einführung in die Lizenzen der Freien Software (Open Source)
+  \end{itemize}
+}
+
+\section{Behauptung}
+\note
+{
+  \begin{itemize}
+    \item Korrekte Verwendung Freier Software ist nicht schwer
+  \end{itemize}
+}
+
+\section{Vorstellung}
+\begin{frame}
+  \begin{itemize}
+    \item Urs Fässler
+    \item Senior Embedded Software Entwickler @ bbv Software Service
+    \item Erstellen von Systemen auf Basis GNU/Linux
+    \item Entwickeln von Software
+    \item Etwas involviert in Patentantrag
+    \item Aktiv in der FSFE Lokalgruppe Zürich
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \begin{itemize}
+    \item Haftungsausschluss
+  \end{itemize}
+\end{frame}
+
+\section{Einführung}
+
+\begin{frame}{Freie Software}
+  4 Freiheiten
+\end{frame}
+
+\begin{frame}{Open Source}
+\end{frame}
+
+\begin{frame}{FLOSS}
+\end{frame}
+
+\begin{frame}{Proprietär versus Kommerziell}
+  \begin{center}
+    \begin{tabular}{|c|c|c|}
+    \hline 
+     & proprietär &  frei \\ 
+    \hline 
+    kommerziell & Windows, Mac OS & Red Hat Enterprise Linux (RHEL) \\ 
+    \hline 
+    gratis & Freeware & Debian \\ 
+    \hline 
+    \end{tabular} 
+  \end{center}
+\end{frame}
+
+\begin{frame}
+\begin{center}
+Geistiges Eigentum - IP
+\end{center}
+\end{frame}
+\note
+{
+(IP, Intellectual Property, Geistiges Eigentum) \url{https://de.wikipedia.org/wiki/Geistiges\_Eigentum\#Systematik}
+  \begin{itemize}
+    \item Arten von Recht, was schützen sie
+  \end{itemize}
+}
+
+\begin{frame}[fragile]{IP - Markenrecht}
+  \todo{Beispiel Iceweasel}
+\end{frame}
+\note
+{
+  \begin{itemize}
+    \item Markenrecht: \url{https://de.wikipedia.org/wiki/Marke_(Recht)}
+    \item Firefox und Debian (Iceweasel): \url{https://lwn.net/Articles/676799/}
+  \end{itemize}
+}
+
+\begin{frame}{IP - Patent}
+  \todo{Beispiel mp3}\\
+  \todo{Private versus Geschäftlich}\\
+  \todo{Softwarepatente}
+\end{frame}
+\note
+{
+  \begin{itemize}
+    \item Patent: \url{https://de.wikipedia.org/wiki/Patent}
+    \item Defensivpublikation
+  \end{itemize}
+}
+
+\begin{frame}{IP - Urheberrecht}
+  \todo{Beispiel Urheberrecht}\\
+  \todo{\textcopyright}
+\end{frame}
+\note
+{
+  \begin{itemize}
+    \item Urheberrecht: \url{https://de.wikipedia.org/wiki/Urheberrecht}
+    \item gilt automatisch: \url{https://anwalt-im-netz.de/urheberrecht/urheberrecht-faq.html\#wann}
+    \item Copyrightzeichen ist nicht nötig: \url{https://de.wikipedia.org/wiki/Copyrightzeichen}
+    \item Nicht verzichtbar (kein public domain, Gemeinfreiheit: \url{https://de.wikipedia.org/wiki/Gemeinfreiheit\#Entlassung\_in\_die\_Gemeinfreiheit})
+  \end{itemize}
+}
+
+\section{Inhalt}
+
+\subsection{Lizenzen}
+\begin{frame}
+  Lizenzen
+\end{frame}
+
+\begin{frame}
+  \todo{Wissen die Teilnehmer was kompilieren und linken ist?}
+  \begin{itemize}
+    \item Überblick: \url{https://tldrlegal.com/}
+    \item Copyleft
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Copyleft}
+  \begin{itemize}
+    \item viral
+  \end{itemize}
+\end{frame}
+\note
+{
+  \begin{itemize}
+    \item Copyleft, viral: https://de.wikipedia.org/wiki/Copyleft
+  \end{itemize}
+}
+
+\begin{frame}{Übersicht}
+  \begin{description}
+    \item[Public Domain] The Unlicense, Beerware, WTFPL
+    \item[Nachgiebig] MIT, BSD, Apache, X11
+    \item[Copyleft] GPL, LGPL, AGPL, MPL
+  \end{description}
+\end{frame}
+
+\begin{frame}{Public Domain Lizenzen}
+  \begin{itemize}
+    \item Nicht möglich, nicht gültig
+    \item sollten nicht benutzt werden
+    \item Verwende CC-0
+  \end{itemize}
+\end{frame}
+\note
+{
+	\begin{itemize}
+		\item WTFPL (\url{https://en.wikipedia.org/wiki/WTFPL})
+		\item Beerware
+		\item The Unlicense (\url{http://programmers.stackexchange.com/questions/147111/what-is-wrong-with-the-unlicense\#147120})
+	\end{itemize}
+}
+
+\begin{frame}{Nachgiebige Lizenzen}
+  \begin{itemize}
+    \item Darf
+    \begin{itemize}
+      \item Ist generell Freie Software
+      \item Kommerzielle Verwendung
+      \item Proprietäre Verwendung
+    \end{itemize}
+    \item Muss
+    \begin{itemize}
+      \item Copyright angeben
+      \item Lizenz mitliefern
+    \end{itemize}
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Copyleft Lizenzen}
+  \begin{itemize}
+    \item Darf
+    \begin{itemize}
+      \item Ist generell Freie Software
+      \item Kommerzielle Verwendung
+    \end{itemize}
+    \item Darf nicht
+    \begin{itemize}
+      \item Proprietäre Verwendung
+    \end{itemize}
+    \item Muss
+    \begin{itemize}
+      \item Code veröffentlichen
+      \item Copyright angeben
+      \item Lizenz mitliefern
+    \end{itemize}
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Werke: Creative Commons}
+	Optionen:\\
+	\begin{tabular}{|l|l|l|}
+		\hline
+		BY	& Attribution		& Frei\\
+		\hline
+		SA	& Share Alike		& Frei\\
+		\hline
+		NC	& Non-Commercial	& Unfrei\\
+		\hline
+		ND	& No Derivatives	& Unfrei\\
+		\hline
+	\end{tabular} 
+	
+	Verwende:\\
+	\begin{tabular}{|l|l|l|}
+		\hline
+		CC-0		& kein Copyright wenn möglich\\
+		\hline
+		CC-BY		& Namensnennung\\
+		\hline
+		CC-BY-SA	& Namensnennung, Viral\\
+		\hline
+	\end{tabular} 
+\end{frame}
+
+\subsection{Handhabung der Lizenzen}
+
+\begin{frame}{Allgemein}
+	\begin{itemize}
+		\item Eventuell hat man durch Vertrag die Rechte abgetreten (z.B. durch Arbeitsvertrag)
+		\item Rechteinhaber darf mit Code machen was er will
+		\begin{itemize}
+			\item Mehrfachlizenzierung
+			\item verschiedene FLOSS Lizenzen
+			\item proprietäre Verwendung
+		\end{itemize}
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Auswahl einer Lizenz}
+	\begin{itemize}
+		\item Wieso will man den Code Veröffentlichen?
+		\item Was will man schützen?
+		\item Was will man erlauben?
+		\item Was will man verhindern? (Gewissen Einsatz verhindern?)
+		\item Webseite: \url{http://choosealicense.com/}
+	\end{itemize}
+	\todo{verschiedene Szenarien auflisten, Beispiele}
+\end{frame}
+
+\begin{frame}{Deklaration der Lizenz}
+	\begin{itemize}
+		\item im Projekt (COPYING)
+		\item in den Files (SPDX)
+		\item in dem Binary (Inkscape)
+		\item Keine Lizenz: Code darf nicht benutzt werden
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Veröffentlichen der Sourcen}
+	\begin{itemize}
+		\item öffentliches Repository
+		\item Download
+		\item Auf Anfrage
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Verwendung mit proprietären Code}
+	\begin{itemize}
+		\item proprietäre Applikation auf freiem OS (z.B. Debian GNU/Linux) kein Problem
+		\item Verwenden in proprietärem Code: nur nachgiebige Lizenzen (MIT)
+		\item Linken nur gegen Libraries mit nachgiebige Lizenzen oder LGPL
+		\item Code unter Copyleft darf nicht in proprietärer Applikation verwendet werden (ausser wenn ausschliesslich intern gebraucht)
+		\item Lizenz Kompatibilität beachten beim mischen von Code unter verschiedenen Copyleft Lizenzen
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Verwendung von Code unter Copyleft Lizenz}
+	\begin{itemize}
+		\item Lizenz Kompatibilität beachten beim mischen von Code unter verschiedenen Copyleft Lizenzen
+		\item Contributoren sollten Patches unter gleicher Lizenz einreichen
+		\item Contributions schwierig wenn Dual-Lizenziert
+		\item Contributor License Agreement
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Verteidigung des eigenen Codes}
+	\begin{itemize}
+		\item Dialog suchen
+		\item gpl-violations.org \url{https://en.wikipedia.org/wiki/Gpl-violations.org}
+		\begin{itemize}
+			\item Verschiedene Erfolge, dadurch Gültigkeit der GPL Bewiesen
+		\end{itemize}
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Best Practises in der FOSS Community}
+	\begin{itemize}
+		\item release early
+		\item release often
+		\item offener Entwicklungsprozess
+		\item einfach Kontaktierbar
+		\item nett sein
+	\end{itemize}
+\end{frame}
+
+\section{Message}
+\begin{frame}{Message}
+	\begin{itemize}
+		\item Korrekter Einsatz Freier Software ist nicht schwer
+		\item Korrekte Deklaration Freier Software macht die Verwendung einfacher
+	\end{itemize}
+\end{frame}
+
+\only<handout>
+{
+\appendix
+
+\section{Backup}
+
+
+\section{Outro}
+\include{outro}
+
+\begin{frame}{GPL-3}
+  \todo{Übersichtlicher machen}\\
+  \todo{hier oder bei der Verwendung genauer erklären?}\\
+  \begin{tabular}{|c|c|c|}
+    \hline 
+    Can & Cannot & Must \\ 
+    \hline 
+    Commercial Use & Sublicense & Include Original \\ 
+    \hline 
+    Modify & Hold Liable & State Changes \\ 
+    \hline 
+    Distribute &  & Disclose Source \\ 
+    \hline 
+    Place Warranty &  & Include License \\ 
+    \hline 
+    Use Patent Claims &  & Include Copyright \\ 
+    \hline 
+    &  & Include Install Instructions \\ 
+    \hline 
+  \end{tabular} 
+\end{frame}
+\note
+{
+  \url{https://tldrlegal.com/license/gnu-general-public-license-v3-(gpl-3)}
+}
+
+
+\section{Literatur \& Bild-Nachweise}
+\begin{frame}[allowframebreaks]{Literature}
+	\tiny{
+		\bibliography{literature}
+	}
+\end{frame}
+}
+
+\end{document}
