@@ -6,23 +6,70 @@
 \end{frame}
 
 \begin{frame}{Freie Software}
-	4 Freiheiten:
-	\begin{itemize}
-		\item Verwenden\only<handout>{ - Die Freiheit, die Software uneingeschränkt und für jeden Zweck einzusetzen.}
-		\item Verstehen\only<handout>{ - Die Freiheit, die Funktionsweise der Software untersuchen und verstehen zu können.}
-		\item Verbreiten\only<handout>{ - Die Freiheit, Kopien der Software zu verbreiten, um damit seinen Mitmenschen zu helfen.}
-		\item Verbessern\only<handout>{ - Die Freiheit, die Software zu verbessern und die Verbesserungen an die Öffentlichkeit weiterzugeben, sodass die gesamte Gesellschaft davon profitieren kann.}
-	\end{itemize}
+	\todo{Farben, kanten abrunden}
+	\begin{center}
+		\begin{tikzpicture}
+		[
+			node distance = 2 cm,
+			box/.style = {thick, draw=black, fill=red, align=center, inner sep = 0.3cm},
+		]
+		
+		\visible<1-> {
+			\node[box] (freedom) {Die Freiheit zu};
+		}
+		
+		\visible<2-> {
+			\node[box, above left of = freedom] {Verwenden\only<handout>{\\Die Freiheit, die Software uneingeschränkt und für jeden Zweck einzusetzen.}};
+		}
+	
+		\visible<3-> {
+			\node[box, above right of = freedom] {Verstehen\only<handout>{\\Die Freiheit, die Funktionsweise der Software untersuchen und verstehen zu können.}};
+		}
+	
+		\visible<4-> {
+			\node[box, below left of = freedom] {Verbreiten\only<handout>{\\Die Freiheit, Kopien der Software zu verbreiten, um damit seinen Mitmenschen zu helfen.}};
+		}
+	
+		\visible<5-> {
+			\node[box, below right of = freedom] {Verbessern\only<handout>{\\Die Freiheit, die Software zu verbessern und die Verbesserungen an die Öffentlichkeit weiterzugeben, sodass die gesamte Gesellschaft davon profitieren kann.}};
+		}
+	
+		\end{tikzpicture}
+	\end{center}
 	\url{http://www.inf-schule.de/software/freie\_software/02\_freiheiten\_freier\_software}
 \end{frame}
 
 \begin{frame}{FLOSS}
-	\todo{Besser aufbereiten}
-	\begin{description}
-		\item[Freie Software] Anwender, Gesellschaft, ethisch, sozial
-		\item[Open Source] Entwickler, Business, praktisch, pragmatisch
-		\item[FLOSS] Free/Libre Open Source Software
-	\end{description}
+	\todo{Farben}\\
+	\todo{Linien zu Eigenschaften}\\
+	\todo{Node Gruppen um Freie Software resp. Open Source}\\
+	\begin{center}
+		\begin{tikzpicture}
+		[
+			node distance = 2 cm,
+			box/.style = {thick, draw=black, fill=red, align=center, inner sep = 0.3cm},
+		]
+		
+		\node[box] (floss) {FLOSS: Free/Libre Open Source Software};
+
+		\node[box, below left of = floss] (free) {Freie Software};
+		\node[box, above left of = free] {Anwender};
+		\node[box, above right of = free] {Gesellschaft};
+		\node[box, below left of = free] {ethisch};
+		\node[box, below right of = free] {sozial};
+	
+		\node[box, below right of = floss] (open) {Open Sources};
+		\node[box, above left of = open] {Entwickler};
+		\node[box, above right of = open] {Business};
+		\node[box, below left of = open] {praktisch};
+		\node[box, below right of = open] {pragmatisch};
+		
+		\begin{pgfonlayer}{background} 
+			\node[box] [fit = (floss) (free) (open)] {};
+		\end{pgfonlayer}
+		
+		\end{tikzpicture}
+	\end{center}
 	\url{https://de.wikipedia.org/wiki/Freie\_Software\#Open\_Source}
 \end{frame}
 
