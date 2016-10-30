@@ -6,12 +6,13 @@
 \usepackage{graphicx}
 \usepackage{appendixnumberbeamer}
 \usepackage{url}
+\usepackage{makecell}
 \usepackage{tikz}
-\usetikzlibrary{arrows,positioning,shapes}
-\usetikzlibrary{backgrounds,fit,decorations.pathreplacing}  % TikZ libraries
+\usetikzlibrary{arrows, positioning, shapes}
+\usetikzlibrary{backgrounds, fit, decorations.pathreplacing, calc}
 
 \title{GPL, MIT, ..., WTF?}
-%\subtitle{}
+\subtitle{Freie Software Lizenzen}
 \author{Urs Fässler}
 \date{26.11.2015}
 \institute
@@ -20,8 +21,7 @@
 }
 \subject{CC-BY-SA Urs Fässler}
 
-\newcounter{todonr}
-\newcommand{\todo}[1]{{\color{red}TODO \arabic{todonr}: #1\stepcounter{todonr}}}
+\newcommand{\todo}[1]{{\color{red}TODO: #1}}
 
 \newcommand{\hnote}[1]{\only<handout>{\footnote{#1}}}
 \newcommand{\hcite}[1]{\only<handout>{\cite{#1}}}
@@ -52,6 +52,13 @@
 		\end{center}
 	\end{frame}
 }
+
+% Table formatting
+\renewcommand\theadalign{cb}
+\renewcommand\theadfont{\bfseries}
+\renewcommand\theadgape{\Gape[4pt]}
+\renewcommand\cellgape{\Gape[4pt]}
+
 
 \begin{document}
 

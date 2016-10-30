@@ -1,8 +1,10 @@
-\subsection{Einführung}
+\subsection{Grundlagen}
+\label{sec:voraussetzungen}
 \subsectionframe
 
 \begin{frame}{Kompilieren}
-	\todo{Kompilieren erklären? Nötig?}
+	\todo{Kompilieren erklären? Nötig?}\\
+	\todo{FLOSS Prozess erklären?}\\
 \end{frame}
 
 \begin{frame}{Freie Software}
@@ -36,105 +38,145 @@
 	
 		\end{tikzpicture}
 	\end{center}
-	\url{http://www.inf-schule.de/software/freie\_software/02\_freiheiten\_freier\_software}
 \end{frame}
+\note
+{
+	\url{http://www.inf-schule.de/software/freie\_software/02\_freiheiten\_freier\_software}
+}
 
 \begin{frame}{FLOSS}
 	\todo{Farben}\\
-	\todo{Linien zu Eigenschaften}\\
-	\todo{Node Gruppen um Freie Software resp. Open Source}\\
 	\begin{center}
 		\begin{tikzpicture}
 		[
-			node distance = 2 cm,
-			box/.style = {thick, draw=black, fill=red, align=center, inner sep = 0.3cm},
+			node distance = 1.8 cm,
+			box/.style = {thick, draw=black, fill=red, align=center, inner sep = 0.25cm},
+			background/.style = {draw=blue},
 		]
-		
-		\node[box] (floss) {FLOSS: Free/Libre Open Source Software};
+		\small
 
-		\node[box, below left of = floss] (free) {Freie Software};
-		\node[box, above left of = free] {Anwender};
-		\node[box, above right of = free] {Gesellschaft};
-		\node[box, below left of = free] {ethisch};
-		\node[box, below right of = free] {sozial};
-	
-		\node[box, below right of = floss] (open) {Open Sources};
-		\node[box, above left of = open] {Entwickler};
-		\node[box, above right of = open] {Business};
-		\node[box, below left of = open] {praktisch};
-		\node[box, below right of = open] {pragmatisch};
-		
+		\node (center) {};
+
+		\visible<8->{
+			\node[box, above = 2.25cm of center] (floss) {FLOSS: Free/Libre Open Source Software};
+		}
+
+		\visible<2->{
+			\node[box, left = 1.25cm of center] (free) {Freie Software};
+		}
+		\visible<3->{
+			\node[box, above left of = free] (user) {Anwender};
+			\draw (free) -- (user);
+			\node[box, above right of = free] (community) {Gesellschaft};
+			\draw (free) -- (community);
+		}
+		\visible<4->{
+			\node[box, below left of = free] (ethical) {ethisch};
+			\draw (free) -- (ethical);
+			\node[box, below right of = free] (social) {sozial};
+			\draw (free) -- (social);
+		}
+
+		\visible<5->{
+			\node[box, right = 1.25cm of center] (open) {Open Sources};
+		}
+		\visible<6->{
+			\node[box, above left of = open] (developer) {Entwickler};
+			\draw (open) -- (developer);
+			\node[box, above right of = open] (business) {Business};
+			\draw (open) -- (business);
+		}
+		\visible<7->{
+			\node[box, below left of = open] (practical) {praktisch};
+			\draw (open) -- (practical);
+			\node[box, below right of = open] (pragmatic) {pragmatisch};
+			\draw (open) -- (pragmatic);
+		}
+
 		\begin{pgfonlayer}{background} 
-			\node[box] [fit = (floss) (free) (open)] {};
+			\node[box] [fit = (floss) (free) (open) (user) (community) (ethical) (social) (developer) (business) (practical) (pragmatic)] {};
 		\end{pgfonlayer}
 		
 		\end{tikzpicture}
 	\end{center}
-	\url{https://de.wikipedia.org/wiki/Freie\_Software\#Open\_Source}
 \end{frame}
+\note
+{
+	\url{https://de.wikipedia.org/wiki/Freie\_Software\#Open\_Source}
+}
 
 \begin{frame}{Proprietär versus Kommerziell}
 	\todo{entfernen?}
 	\begin{center}
-		\begin{tabular}{|c|c|c|}
+		\begin{tabular}{c|c|c|}
+			 & \thead{proprietär} &  \thead{frei} \\ 
 			\hline 
-			 & proprietär &  frei \\ 
+			\thead{kommerziell} & \makecell{Windows\\Mac OS} & \makecell{Red Hat Enterprise\\Linux (RHEL)}\\ 
 			\hline 
-			kommerziell & Windows, Mac OS & Red Hat Enterprise Linux (RHEL) \\ 
-			\hline 
-			gratis & Freeware, (iOS) & Debian \\ 
+			\thead{gratis} & \makecell{(iOS)\\Freeware} & \makecell{Debian} \\ 
 			\hline 
 		\end{tabular} 
 	\end{center}
 \end{frame}
 
-\begin{frame}{IP - Geistiges Eigentum}
+\begin{frame}{IP}
+	\begin{center}
+		Geistiges Eigentum
+	\end{center}
+\end{frame}
+\note
+{
+	(IP, Intellectual Property, Geistiges Eigentum) \url{https://de.wikipedia.org/wiki/Geistiges\_Eigentum\#Systematik}
+}
+
+
+\begin{frame}{IP - Patent}
 	\begin{itemize}
-		\item Markenrecht
-		\begin{itemize}
-			\item \todo{Tux oder GNU}
-		\end{itemize}
-		\item Patent
-		\begin{itemize}
-			\item \todo{positives Beispiel}
-			\item \todo{Beispiel mp3?}
-			\item \todo{Private versus Geschäftlich?}
-			\item \todo{Softwarepatente?}
-		\end{itemize}
-		\item Urheberrecht
-		\begin{itemize}
-			\item \todo{Verweis auf Bild vom Anfang}
-		\end{itemize}
+		\item \todo{positives Beispiel}
+		\item \todo{Beispiel mp3?}
+		\item \todo{Private versus Geschäftlich?}
+		\item \todo{Softwarepatente?}
 	\end{itemize}
 \end{frame}
 \note
 {
 	(IP, Intellectual Property, Geistiges Eigentum) \url{https://de.wikipedia.org/wiki/Geistiges\_Eigentum\#Systematik}
 	\begin{itemize}
-		\item Markenrecht
-		\begin{itemize}
-			\item Markenrecht: \url{https://de.wikipedia.org/wiki/Marke_(Recht)}
-			\item Firefox und Debian (Iceweasel): \url{https://lwn.net/Articles/676799/}
-		\end{itemize}
-		\item Patent
-		\begin{itemize}
-			\item Patent: \url{https://de.wikipedia.org/wiki/Patent}
-			\item Defensivpublikation
-		\end{itemize}
-		\item Urheberrecht
-		\begin{itemize}
-			\item Urheberrecht: \url{https://de.wikipedia.org/wiki/Urheberrecht}
-			\item gilt automatisch: \url{https://anwalt-im-netz.de/urheberrecht/urheberrecht-faq.html\#wann}
-			\item Copyrightzeichen ist nicht nötig: \url{https://de.wikipedia.org/wiki/Copyrightzeichen}
-			\item Nicht verzichtbar (kein public domain, Gemeinfreiheit: \url{https://de.wikipedia.org/wiki/Gemeinfreiheit\#Entlassung\_in\_die\_Gemeinfreiheit})
-		\end{itemize}
+		\item Patent: \url{https://de.wikipedia.org/wiki/Patent}
+		\item Defensivpublikation
 	\end{itemize}
 }
 
-\begin{frame}{Copyleft}
+\begin{frame}{IP - Markenrecht}
+	\todo{GNU Logo}
+\end{frame}
+\note
+{
 	\begin{itemize}
-		\item viral
+		\item Markenrecht: \url{https://de.wikipedia.org/wiki/Marke_(Recht)}
+		\item Firefox und Debian (Iceweasel): \url{https://lwn.net/Articles/676799/}
+		\item GNU Logo ist geschützt: \url{https://www.gnu.org/graphics/agnuhead.html}
 	\end{itemize}
+}
+
+\begin{frame}{IP - Urheberrecht}
+	\todo{Verweis auf Bild vom Anfang}\\
+	\todo{Software}
+\end{frame}
+\note
+{
+	\begin{itemize}
+		\item Urheberrecht: \url{https://de.wikipedia.org/wiki/Urheberrecht}
+		\item gilt automatisch: \url{https://anwalt-im-netz.de/urheberrecht/urheberrecht-faq.html\#wann}
+		\item Copyrightzeichen ist nicht nötig: \url{https://de.wikipedia.org/wiki/Copyrightzeichen}
+		\item Nicht verzichtbar (kein public domain, Gemeinfreiheit: \url{https://de.wikipedia.org/wiki/Gemeinfreiheit\#Entlassung\_in\_die\_Gemeinfreiheit})
+	\end{itemize}
+}
+
+
+\begin{frame}{Copyleft}
+	\todo{viral erklären}\\
+	\todo{Zeichen}
 \end{frame}
 \note
 {
