@@ -4,7 +4,12 @@
 
 \begin{frame}{Rechte am Code}
 	\begin{itemize}
-		\item Eventuell hat man durch Vertrag die Rechte abgetreten (z.B. durch Arbeitsvertrag)
+		\item Eventuell hat man durch Vertrag die Rechte abgetreten
+		\begin{itemize}
+			\item Anstellungsvertrag
+			\item Auftrag
+			\item Contributor License Agreement
+		\end{itemize}
 		\item Rechteinhaber darf mit Code machen was er will
 		\begin{itemize}
 			\item Mehrfachlizenzierung
@@ -15,20 +20,34 @@
 \end{frame}
 
 \begin{frame}{Verwendung mit proprietären Code}
+	\includegraphics[width=0.2\textwidth]{res/propritary-on-os.pdf}
+	\hfill
+	\includegraphics[width=0.2\textwidth]{res/propritary-dynamic-linking.pdf}
+	\hfill
+	\includegraphics[width=0.2\textwidth]{res/propritary-static-linking.pdf}
+	\hfill
+	\includegraphics[width=0.2\textwidth]{res/propritary-use-code.pdf}
+	\\
+	\todo{schönere Bilder}
+	\includegraphics[width=3em]{res/open-handcuffs.pdf}
+	\includegraphics[width=3em]{res/gnu-head.pdf}
+\end{frame}
+\note
+{
 	\begin{itemize}
 		\item proprietäre Applikation auf freiem OS (z.B. Debian GNU/Linux) kein Problem
 		\item Verwenden in proprietärem Code: nur nachgiebige Lizenzen (MIT)
 		\item Linken nur gegen Libraries mit nachgiebige Lizenzen oder LGPL
-		\item Code unter Copyleft darf nicht in proprietärer Applikation verwendet werden\footnote{ausser wenn ausschliesslich intern gebraucht}
+		\item Code unter Copyleft darf nicht in proprietärer Applikation verwendet werden\footnote{ausser wenn ausschliesslich intern gebraucht, dann ist es Freie Software}
+		\item Open Handcuffs: CC-0 by qubodup https://openclipart.org/detail/171929/open-handcuffs
 	\end{itemize}
-\end{frame}
+}
 
 \begin{frame}{Verwendung von Code unter Copyleft Lizenz}
 	\begin{itemize}
-		\item Lizenz Kompatibilität beachten beim mischen von Code unter verschiedenen Copyleft Lizenzen
-		\item Contributoren sollten Patches unter gleicher Lizenz einreichen
-		\item Contributions schwierig wenn Dual-Lizenziert (Frei und proprietär)
-		\item Contributor License Agreement
+		\item Lizenz Kompatibilität beachten
+		\item Patches unter gleicher Lizenz
+		\item Contributions schwierig wenn Dual-Lizenziert
 	\end{itemize}
 \end{frame}
 

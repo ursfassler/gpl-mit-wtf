@@ -49,7 +49,7 @@
 	\begin{center}
 		\begin{tikzpicture}
 		[
-			node distance = 1.8 cm,
+			node distance = 2 cm,
 			box/.style = {thick, draw=black, fill=red, align=center, inner sep = 0.25cm},
 			background/.style = {draw=blue},
 		]
@@ -62,7 +62,7 @@
 		}
 
 		\visible<2->{
-			\node[box, left = 1.25cm of center] (free) {Freie Software};
+			\node[box, left = 1.75cm of center] (free) {\includegraphics[height=1cm]{res/gnu-head.pdf}};
 		}
 		\visible<3->{
 			\node[box, above left of = free] (user) {Anwender};
@@ -78,7 +78,7 @@
 		}
 
 		\visible<5->{
-			\node[box, right = 1.25cm of center] (open) {Open Sources};
+			\node[box, right = 1.75cm of center] (open) {\includegraphics[height=1cm]{res/opensource.pdf}};
 		}
 		\visible<6->{
 			\node[box, above left of = open] (developer) {Entwickler};
@@ -103,9 +103,10 @@
 \note
 {
 	\url{https://de.wikipedia.org/wiki/Freie\_Software\#Open\_Source}
+	Logo Open Source Initiative: CC-SA Open Source Initiative official SVG \url{https://commons.wikimedia.org/wiki/File:Opensource.svg}
 }
 
-\begin{frame}{Proprietär versus Kommerziell}
+\begin{frame}{Frei und Kommerziell}
 	\todo{entfernen?}
 	\begin{center}
 		\begin{tabular}{c|c|c|}
@@ -131,12 +132,9 @@
 
 
 \begin{frame}{IP - Patent}
-	\begin{itemize}
-		\item \todo{positives Beispiel}
-		\item \todo{Beispiel mp3?}
-		\item \todo{Private versus Geschäftlich?}
-		\item \todo{Softwarepatente?}
-	\end{itemize}
+	\begin{center}
+		\includegraphics[width=0.6\textwidth]{res/tulipan-Pharmaceutical-carton.pdf}
+	\end{center}
 \end{frame}
 \note
 {
@@ -144,29 +142,35 @@
 	\begin{itemize}
 		\item Patent: \url{https://de.wikipedia.org/wiki/Patent}
 		\item Defensivpublikation
+		\item Acarton with pills: CC-0 by tulipan \url{https://openclipart.org/detail/6135/pharmaceutical-carton}
 	\end{itemize}
 }
 
 \begin{frame}{IP - Markenrecht}
-	\todo{GNU Logo}
+	\begin{center}
+		\includegraphics[width=0.5\textwidth]{res/gnu-head.pdf}
+	\end{center}
 \end{frame}
 \note
 {
 	\begin{itemize}
 		\item Markenrecht: \url{https://de.wikipedia.org/wiki/Marke_(Recht)}
 		\item Firefox und Debian (Iceweasel): \url{https://lwn.net/Articles/676799/}
-		\item GNU Logo ist geschützt: \url{https://www.gnu.org/graphics/agnuhead.html}
+		\item A GNU Head: CC-BY-SA Etienne Suvasa; Trademark of the GNU Project: \url{https://www.gnu.org/graphics/agnuhead.html}
 	\end{itemize}
 }
 
 \begin{frame}{IP - Urheberrecht}
-	\todo{Verweis auf Bild vom Anfang}\\
-	\todo{Software}
+	\begin{center}
+		\includegraphics[width=0.9\textwidth]{res/turtles.jpg}
+	\end{center}
 \end{frame}
 \note
 {
 	\begin{itemize}
 		\item Urheberrecht: \url{https://de.wikipedia.org/wiki/Urheberrecht}
+		\item für Werke
+		\item daher auch für Software
 		\item gilt automatisch: \url{https://anwalt-im-netz.de/urheberrecht/urheberrecht-faq.html\#wann}
 		\item Copyrightzeichen ist nicht nötig: \url{https://de.wikipedia.org/wiki/Copyrightzeichen}
 		\item Nicht verzichtbar (kein public domain, Gemeinfreiheit: \url{https://de.wikipedia.org/wiki/Gemeinfreiheit\#Entlassung\_in\_die\_Gemeinfreiheit})
@@ -175,8 +179,9 @@
 
 
 \begin{frame}{Copyleft}
-	\todo{viral erklären}\\
-	\todo{Zeichen}
+	\begin{center}
+		\includegraphics[width=0.5\textwidth]{res/copyleft.pdf}
+	\end{center}
 \end{frame}
 \note
 {
