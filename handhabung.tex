@@ -4,18 +4,12 @@
 
 \begin{frame}{Rechte am Code}
 	\begin{itemize}
-		\item Eventuell hat man durch Vertrag die Rechte abgetreten
+		\item Besitzt man die Rechte?
 		\begin{itemize}
 			\item Anstellungsvertrag
-			\item Auftrag
 			\item Contributor License Agreement
 		\end{itemize}
-		\item Rechteinhaber darf mit Code machen was er will
-		\begin{itemize}
-			\item Mehrfachlizenzierung
-			\item verschiedene FLOSS Lizenzen
-			\item proprietäre Verwendung
-		\end{itemize}
+		\item Besitzer darf mit Code machen was er will
 	\end{itemize}
 \end{frame}
 
@@ -28,6 +22,7 @@
 	\hfill
 	\includegraphics[width=0.2\textwidth]{res/propritary-use-code.pdf}
 	\\
+	\todo{AGPL}\\
 	\todo{schönere Bilder}
 	\includegraphics[width=3em]{res/open-handcuffs.pdf}
 	\includegraphics[width=3em]{res/gnu-head.pdf}
@@ -43,26 +38,36 @@
 	\end{itemize}
 }
 
-\begin{frame}{Verwendung von Code unter Copyleft Lizenz}
+\begin{frame}{Verwendung mit Freier Software}
 	\begin{itemize}
-		\item Lizenz Kompatibilität beachten
 		\item Patches unter gleicher Lizenz
-		\item Contributions schwierig wenn Dual-Lizenziert
+		\item Lizenz Kompatibilität beachten
 	\end{itemize}
+	\begin{center}
+		\includegraphics[width=\textwidth]{res/floss-license-compability.png}
+	\end{center}
 \end{frame}
 
 \begin{frame}{Auswahl einer Lizenz}
+	\begin{center}
+		\begin{tabular}{ccc}
+		\includegraphics[width=1cm]{res/PD-icon.pdf} & \includegraphics[width=1cm]{res/by.pdf} & \includegraphics[width=1cm]{res/copyleft.pdf} \\ 
+		Public Domain & Permissiv & Copyleft \\
+		\includegraphics[width=3cm]{res/cc-zero.pdf} & \includegraphics[width=3cm]{res/mit-logo.pdf} & \includegraphics[width=3cm]{res/gpl-v3-logo.pdf} \\
+		\end{tabular} 
+	\end{center}
+	\begin{itemize}
+		\item \url{http://choosealicense.com/}
+	\end{itemize}
+\end{frame}
+\note
+{
 	\begin{itemize}
 		\item Was will man schützen?
 		\item Was will man erlauben?
-		\item Was will man verhindern? (Gewissen Einsatz verhindern?)
-		\item Webseite: \url{http://choosealicense.com/}
+		\item Was will man verhindern?
 	\end{itemize}
-	\todo{verschiedene Szenarien auflisten, Beispiele}\\
-	MIT \\
-	\includegraphics[width=2cm]{res/gpl-v3-logo.pdf} \\
-	\includegraphics[width=2cm]{res/cc-zero.pdf}
-\end{frame}
+}
 
 \begin{frame}{Deklaration der Lizenz}
 	\only<beamer:0|handout:1>
@@ -100,6 +105,7 @@
 }
 
 \begin{frame}{Veröffentlichen der Sourcen}
+	\todo{verbessern}
 	\begin{itemize}
 		\item öffentliches Repository
 		\item Download
@@ -110,19 +116,10 @@
 \begin{frame}{Verteidigung des eigenen Codes}
 	\begin{itemize}
 		\item Dialog suchen
-		\item gpl-violations.org \url{https://en.wikipedia.org/wiki/Gpl-violations.org}
-		\begin{itemize}
-			\item Verschiedene Erfolge, dadurch Gültigkeit der GPL Bewiesen
-		\end{itemize}
+		\item \url{http://gpl-violations.org}
 	\end{itemize}
 \end{frame}
-
-\begin{frame}{Best Practises in der FLOSS Community}
-	\begin{itemize}
-		\item release early
-		\item release often
-		\item offener Entwicklungsprozess
-		\item einfach Kontaktierbar
-		\item nett sein
-	\end{itemize}
-\end{frame}
+\note
+{
+  \url{https://en.wikipedia.org/wiki/Gpl-violations.org}
+}

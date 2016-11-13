@@ -29,6 +29,143 @@
 	\url{https://tldrlegal.com/license/gnu-general-public-license-v3-(gpl-3)}
 }
 
+\begin{frame}{FLOSS}
+	\todo{Farben}\\
+	\begin{center}
+		\begin{tikzpicture}
+		[
+			node distance = 2 cm,
+			box/.style = {thick, draw=black, fill=red, align=center, inner sep = 0.25cm},
+			background/.style = {draw=blue},
+		]
+		\small
+
+		\node (center) {};
+
+		\visible<8->{
+			\node[box, above = 2.25cm of center] (floss) {FLOSS: Free/Libre Open Source Software};
+		}
+
+		\visible<2->{
+			\node[box, left = 1.75cm of center] (free) {\includegraphics[height=1cm]{res/gnu-head.pdf}};
+		}
+		\visible<3->{
+			\node[box, above left of = free] (user) {Anwender};
+			\draw (free) -- (user);
+			\node[box, above right of = free] (community) {Gesellschaft};
+			\draw (free) -- (community);
+		}
+		\visible<4->{
+			\node[box, below left of = free] (ethical) {ethisch};
+			\draw (free) -- (ethical);
+			\node[box, below right of = free] (social) {sozial};
+			\draw (free) -- (social);
+		}
+
+		\visible<5->{
+			\node[box, right = 1.75cm of center] (open) {\includegraphics[height=1cm]{res/opensource.pdf}};
+		}
+		\visible<6->{
+			\node[box, above left of = open] (developer) {Entwickler};
+			\draw (open) -- (developer);
+			\node[box, above right of = open] (business) {Business};
+			\draw (open) -- (business);
+		}
+		\visible<7->{
+			\node[box, below left of = open] (practical) {praktisch};
+			\draw (open) -- (practical);
+			\node[box, below right of = open] (pragmatic) {pragmatisch};
+			\draw (open) -- (pragmatic);
+		}
+
+		\begin{pgfonlayer}{background} 
+			\node[box] [fit = (floss) (free) (open) (user) (community) (ethical) (social) (developer) (business) (practical) (pragmatic)] {};
+		\end{pgfonlayer}
+		
+		\end{tikzpicture}
+	\end{center}
+\end{frame}
+\note
+{
+	\url{https://de.wikipedia.org/wiki/Freie\_Software\#Open\_Source}
+	Logo Open Source Initiative: CC-SA Open Source Initiative official SVG \url{https://commons.wikimedia.org/wiki/File:Opensource.svg}
+}
+
+
+\begin{frame}{Werke: Creative Commons}
+	\begin{center}
+	\begin{tabular}{cccc}
+		\includegraphics[height=1cm]{res/by.pdf}
+		&
+		\includegraphics[height=1cm]{res/sa.pdf}
+		&
+		\includegraphics[height=1cm]{res/nc.pdf}
+		&
+		\includegraphics[height=1cm]{res/nd.pdf}
+	\\
+		BY
+		&
+		SA
+		&
+		NC
+		&
+		ND
+	\\
+		Attribution
+		&
+		Share Alike
+		&
+		Non-Commercial
+		&
+		No Derivatives
+	\\
+		Frei
+		&
+		Frei
+		&
+		Unfrei
+		&
+		Unfrei
+	\end{tabular} 
+	\\
+	\vspace{1cm}
+	\begin{tabular}{ccc}
+		\includegraphics[height=1cm]{res/cc-zero.pdf}
+		&
+		\includegraphics[height=1cm]{res/cc-by.pdf}
+		&
+		\includegraphics[height=1cm]{res/cc-by-sa.pdf}
+	\\
+		CC-0
+		&
+		CC-BY
+		&
+		CC-BY-SA
+	\\
+		Public Domain
+		&
+		Nachgiebig
+		&
+		Copyleft
+	\end{tabular} 
+	\\
+	\vspace{1cm}
+	\end{center}
+\end{frame}
+\note
+{
+	Logos sind Public Domain (\url{https://creativecommons.org/about/downloads/})
+}
+
+\begin{frame}{Best Practises in der FLOSS Community}
+	\begin{itemize}
+		\item release early
+		\item release often
+		\item offener Entwicklungsprozess
+		\item einfach Kontaktierbar
+		\item nett sein
+	\end{itemize}
+\end{frame}
 
 \section{Literatur \& Bild-Nachweise}
 \begin{frame}[allowframebreaks]{Literature}

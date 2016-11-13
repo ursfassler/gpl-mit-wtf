@@ -2,12 +2,54 @@
 \label{sec:lizenzen}
 \subsectionframe
 
+\begin{frame}{Lizenz-Kategorien}
+	\begin{center}
+		\begin{tabular}{ccc}
+		\includegraphics[width=2.5cm]{res/PD-icon.pdf} & \includegraphics[width=2.5cm]{res/by.pdf} & \includegraphics[width=2.5cm]{res/copyleft.pdf} \\ 
+		Public Domain & Permissiv & Copyleft \\
+		\hspace{3cm} & \hspace{3cm} & \hspace{3cm} \\
+		\end{tabular} 
+	\end{center}
+\end{frame}
+\note
+{
+	\begin{itemize}
+		\item Copyleft, viral: https://de.wikipedia.org/wiki/Copyleft
+	\end{itemize}
+}
+
+\begin{frame}{Kategorien Gegenüberstellung}
+	\newcommand{\yes}{\color{green}\checkmark}
+	\newcommand{\no}{\boldmath \color{red}$\times$}
+	\begin{tabular}{lccc}
+		& \includegraphics[width=1cm]{res/PD-icon.pdf} & \includegraphics[width=1cm]{res/by.pdf} & \includegraphics[width=1cm]{res/copyleft.pdf} \\ 
+		& Public Domain & Permissiv & Copyleft \\ 
+		\hline 
+		Freie Software & \yes & \yes & \yes \\ 
+		\hline 
+		Kommerziell & \yes & \yes & \yes \\ 
+		\hline 
+		Proprietär & \yes & \yes & \no \\ 
+		\hline 
+		Code veröffentlichen & \no & \no & \yes \\ 
+		\hline 
+		Copyright angeben & \no & \yes & \yes \\ 
+		\hline 
+		Lizenz mitliefern & \no & \yes & \yes \\ 
+		\hline 
+		gültig in D-A-CH & \no & \yes & \yes \\
+		\hline 
+	\end{tabular} 
+\end{frame}{
+
 \begin{frame}{Public Domain Lizenzen}
 	\includegraphics[height=3cm]{res/PD-icon.pdf}
 	\hfill
 	\includegraphics[height=3cm]{res/beer.pdf}
 	\hfill
 	\includegraphics[height=2.5cm]{res/WTFPL_logo.pdf}
+	\\
+	\includegraphics[width=4cm]{res/cc-zero.pdf}
 \end{frame}
 \note
 {
@@ -19,16 +61,19 @@
 		\item An official logo for the WTFPL license: WTFPD by www.wtfpl.net \url{https://commons.wikimedia.org/wiki/File:WTFPL_logo.svg}
 		\item nicht gültig in D-A-CH
 		\item Verwende CC-0
+		\item CC-0: Public Domain (\url{https://creativecommons.org/about/downloads/})
 	\end{itemize}
 }
 
-\begin{frame}{Nachgiebige Lizenzen}
+\begin{frame}{Permissive Lizenzen}
 	\begin{center}
 		{\Huge MIT}
 		\hfill
 		{\Huge BSD}
 		\hfill
 		{\Huge Apache}
+		\\
+		\includegraphics[width=4cm]{res/cc-by.pdf}
 	\end{center}
 \end{frame}
 \note
@@ -46,6 +91,7 @@
 			\item Copyright angeben
 			\item Lizenz mitliefern
 		\end{itemize}
+		\item CC-BY: Public Domain (\url{https://creativecommons.org/about/downloads/})
 	\end{itemize}
 }
 
@@ -57,8 +103,7 @@
 		\hfill
 		\includegraphics[height=1.5cm]{res/agpl-v3-logo.pdf}
 		\\
-		\vspace{1cm}
-		{\Huge MPL}
+		\includegraphics[width=4cm]{res/cc-by-sa.pdf}
 	\end{center}
 \end{frame}
 \note
@@ -85,101 +130,15 @@
 		\item GPLv3 Logo: Public Domain by Free Software Foundation (\url{https://commons.wikimedia.org/wiki/File:GPLv3\_Logo.svg})
 		\item LGPLv3 Logo: Public Domain by Free Software Foundation (\url{https://commons.wikimedia.org/wiki/File:LGPLv3\_Logo.svg})
 		\item AGPLv3 Logo: Public Domain by Free Software Foundation (\url{https://commons.wikimedia.org/wiki/File:AGPLv3\_Logo.svg})
+		\item CC-BY-SA: Public Domain (\url{https://creativecommons.org/about/downloads/})
 	\end{itemize}
 }
-
-
-\begin{frame}{Lizenztypen Gegenüberstellung}
-	\begin{tabular}{lccc}
-		& Public Domain & Nachgiebig & Copyleft \\ 
-		\hline 
-		Freie Software & \checkmark & \checkmark & \checkmark \\ 
-		\hline 
-		Kommerziell & \checkmark & \checkmark & \checkmark \\ 
-		\hline 
-		Proprietär & \checkmark & \checkmark & $\times$ \\ 
-		\hline 
-		Copyright angeben & $\times$ & \checkmark & \checkmark \\ 
-		\hline 
-		Lizenz mitliefern & $\times$ & \checkmark & \checkmark \\ 
-		\hline 
-		Code veröffentlichen & $\times$ & $\times$ & \checkmark \\ 
-		\hline 
-		gültig in D-A-CH & $\times$ & \checkmark & \checkmark \\
-		\hline 
-	\end{tabular} 
-\end{frame}{
-
-\begin{frame}{Werke: Creative Commons}
-	\begin{center}
-	\begin{tabular}{cccc}
-		\includegraphics[height=1cm]{res/by.pdf}
-		&
-		\includegraphics[height=1cm]{res/sa.pdf}
-		&
-		\includegraphics[height=1cm]{res/nc.pdf}
-		&
-		\includegraphics[height=1cm]{res/nd.pdf}
-	\\
-		BY
-		&
-		SA
-		&
-		NC
-		&
-		ND
-	\\
-		Attribution
-		&
-		Share Alike
-		&
-		Non-Commercial
-		&
-		No Derivatives
-	\\
-		Frei
-		&
-		Frei
-		&
-		Unfrei
-		&
-		Unfrei
-	\end{tabular} 
-	\\
-	\vspace{1cm}
-	\begin{tabular}{ccc}
-		\includegraphics[height=1cm]{res/cc-zero.pdf}
-		&
-		\includegraphics[height=1cm]{res/cc-by.pdf}
-		&
-		\includegraphics[height=1cm]{res/cc-by-sa.pdf}
-	\\
-		CC-0
-		&
-		CC-BY
-		&
-		CC-BY-SA
-	\\
-		Public Domain
-		&
-		Nachgiebig
-		&
-		Copyleft
-	\end{tabular} 
-	\\
-	\vspace{1cm}
-	\end{center}
-\end{frame}
-\note
-{
-	Logos sind Public Domain (\url{https://creativecommons.org/about/downloads/})
-}
-
 
 \begin{frame}{Detailliertere Informationen}
 	\begin{itemize}
-		\item Überblick: \url{https://tldrlegal.com/}
+		\item \url{https://tldrlegal.com/}
 	\end{itemize}
+	\vspace{1em}
 	\begin{center}
 		\includegraphics[height=5cm]{res/tldrlegal.png}
 	\end{center}
