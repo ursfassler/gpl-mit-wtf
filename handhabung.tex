@@ -53,39 +53,57 @@
 
 \begin{frame}{Auswahl einer Lizenz}
 	\begin{itemize}
-		\item Wieso will man den Code Veröffentlichen? \todo{entfernen}
 		\item Was will man schützen?
 		\item Was will man erlauben?
 		\item Was will man verhindern? (Gewissen Einsatz verhindern?)
 		\item Webseite: \url{http://choosealicense.com/}
 	\end{itemize}
-	\todo{verschiedene Szenarien auflisten, Beispiele}
+	\todo{verschiedene Szenarien auflisten, Beispiele}\\
+	MIT \\
+	\includegraphics[width=2cm]{res/gpl-v3-logo.pdf} \\
+	\includegraphics[width=2cm]{res/cc-zero.pdf}
 \end{frame}
 
 \begin{frame}{Deklaration der Lizenz}
+	\only<beamer:0|handout:1>
+	{
 	\begin{itemize}
 		\item im Projekt (COPYING)
 		\item in den Files (SPDX)
 		\item in dem Binary (Inkscape)
 		\item Keine Lizenz: Code darf nicht benutzt werden
 	\end{itemize}
+	}
+	\begin{center}
+		\only<2|handout:2>
+		{
+			\includegraphics[width=\textwidth]{res/lizenz-source.png}
+		}
+		\only<3|handout:3>
+		{
+			\includegraphics[width=\textwidth]{res/lizenz-file.png}
+		}
+		\only<4|handout:4>
+		{
+			\includegraphics[height=6cm]{res/lizenz-binary.png}
+		}
+	\end{center}
 \end{frame}
+\note
+{
+	\begin{itemize}
+		\item im Projekt (COPYING)
+		\item in den Files (SPDX)
+		\item in dem Binary (Inkscape)
+		\item Keine Lizenz: Code darf nicht benutzt werden
+	\end{itemize}
+}
 
 \begin{frame}{Veröffentlichen der Sourcen}
 	\begin{itemize}
 		\item öffentliches Repository
 		\item Download
 		\item Auf Anfrage
-	\end{itemize}
-\end{frame}
-
-\begin{frame}{Best Practises in der FLOSS Community}
-	\begin{itemize}
-		\item release early
-		\item release often
-		\item offener Entwicklungsprozess
-		\item einfach Kontaktierbar
-		\item nett sein
 	\end{itemize}
 \end{frame}
 
@@ -96,5 +114,15 @@
 		\begin{itemize}
 			\item Verschiedene Erfolge, dadurch Gültigkeit der GPL Bewiesen
 		\end{itemize}
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Best Practises in der FLOSS Community}
+	\begin{itemize}
+		\item release early
+		\item release often
+		\item offener Entwicklungsprozess
+		\item einfach Kontaktierbar
+		\item nett sein
 	\end{itemize}
 \end{frame}
