@@ -15,7 +15,7 @@
    id="svg2"
    version="1.1"
    inkscape:version="0.91 r13725"
-   sodipodi:docname="mit-logo.svg">
+   sodipodi:docname="unlicense-logo.pdf">
   <defs
      id="defs4" />
   <sodipodi:namedview
@@ -26,8 +26,8 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="1.979899"
-     inkscape:cx="-64.244837"
-     inkscape:cy="74.540301"
+     inkscape:cx="-42.526557"
+     inkscape:cy="12.920996"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -48,7 +48,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title />
+        <dc:title></dc:title>
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -68,14 +68,14 @@
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12px;line-height:125%;font-family:'DejaVu Sans';-inkscape-font-specification:'DejaVu Sans';text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       x="123.77374"
-       y="984.26251"
+       x="124.79256"
+       y="983.85999"
        id="text4138"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
          id="tspan4140"
-         x="123.77374"
-         y="984.26251"
-         style="font-style:italic;font-variant:normal;font-weight:600;font-stretch:normal;font-size:35px;line-height:125%;font-family:FreeSans;-inkscape-font-specification:'FreeSans, Semi-Bold Italic';text-align:center;writing-mode:lr-tb;text-anchor:middle">MIT</tspan></text>
+         x="124.79256"
+         y="983.85999"
+         style="font-style:italic;font-variant:normal;font-weight:600;font-stretch:normal;font-size:35px;line-height:125%;font-family:FreeSans;-inkscape-font-specification:'FreeSans, Semi-Bold Italic';text-align:center;writing-mode:lr-tb;text-anchor:middle">Unlicense</tspan></text>
   </g>
 </svg>
