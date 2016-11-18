@@ -7,12 +7,15 @@
 \subsectionframe
 
 \begin{frame}{Rechte am Code}
+	\pause
 	\begin{itemize}
 		\item Besitzt man die Rechte?
+		\pause
 		\begin{itemize}
 			\item Anstellungsvertrag
 			\item Contributor License Agreement
 		\end{itemize}
+		\pause
 		\item Besitzer darf mit Code machen was er will
 	\end{itemize}
 \end{frame}
@@ -101,26 +104,35 @@
 }
 
 \begin{frame}{Verwendung mit Freier Software}
+	\pause
 	\begin{itemize}
 		\item Patches unter gleicher Lizenz
+		\pause
 		\item Lizenz Kompatibilität beachten
 	\end{itemize}
+	\pause
 	\begin{center}
 		\includegraphics[width=\textwidth]{res/floss-license-compability.png}
 	\end{center}
 \end{frame}
+\note
+{
+	\begin{itemize}
+		\item Floss-license-slide-image.png: CC-SA 3.0 by David A. Wheeler (\url{https://commons.wikimedia.org/wiki/File:Floss-license-slide-image.png})
+	\end{itemize}
+}
 
 \begin{frame}{Auswahl einer Lizenz}
 	\begin{center}
 		\begin{tabular}{ccc}
-		\includegraphics[width=1cm]{res/PD-icon.pdf} & \includegraphics[width=1cm]{res/by.pdf} & \includegraphics[width=1cm]{res/copyleft.pdf} \\ 
-		Public Domain & Permissiv & Copyleft \\
-		\includegraphics[width=2.8cm]{res/cc-zero.pdf} & \includegraphics[width=2.8cm]{res/mit-logo.pdf} & \includegraphics[width=2.8cm]{res/gpl-v3-logo.pdf} \\
+		\visible<2->{\includegraphics[width=1cm]{res/PD-icon.pdf}} & \visible<3->{\includegraphics[width=1cm]{res/by.pdf}} & \visible<4->{\includegraphics[width=1cm]{res/copyleft.pdf}} \\ 
+		\visible<2->{Public Domain} & \visible<3->{Permissiv} & \visible<4->{Copyleft} \\
+		\visible<2->{\includegraphics[width=2.8cm]{res/cc-zero.pdf}} & \visible<3->{\includegraphics[width=2.8cm]{res/mit-logo.pdf}} & \visible<4->{\includegraphics[width=2.8cm]{res/gpl-v3-logo.pdf}} \\
 		\hspace{0.3\textwidth} & \hspace{0.3\textwidth} & \hspace{0.3\textwidth} \\
 		\end{tabular} 
 	\end{center}
 	\begin{itemize}
-		\item \url{http://choosealicense.com/}
+		\visible<5->{\item \url{http://choosealicense.com/}}
 	\end{itemize}
 	\vspace{1cm}
 \end{frame}
@@ -181,7 +193,9 @@
 
 \begin{frame}{Verteidigung des eigenen Codes}
 	\begin{itemize}
+		\pause
 		\item Dialog suchen
+		\pause
 		\item \url{http://gpl-violations.org}
 	\end{itemize}
 \end{frame}

@@ -6,33 +6,37 @@
 \label{sec:voraussetzungen}
 \subsectionframe
 
-\begin{frame}{Freie Software}
-	\todo{Farben, kanten abrunden}
+\begin{frame}
 	\begin{center}
 		\begin{tikzpicture}
 		[
-			node distance = 2 cm,
-			box/.style = {thick, draw=black, fill=red, align=center, inner sep = 0.3cm},
+			node distance = 3 cm,
+			box/.style = {thick, draw=black, top color=white, bottom color=lightblue, rounded corners, align=center, inner sep = 0.5cm},
+			can/.style={->, very thick, shorten <=0.2cm, shorten >=0.2cm,}
 		]
 		
 		\visible<1-> {
-			\node[box] (freedom) {Die Freiheit zu};
+			\node[box] (freedom) {Freie Software};
 		}
 		
 		\visible<2-> {
-			\node[box, above left of = freedom] {Verwenden\only<handout>{\\Die Freiheit, die Software uneingeschränkt und für jeden Zweck einzusetzen.}};
+			\node[box, above right of = freedom] (run) {Verwenden\only<handout>{\\Die Freiheit, die Software uneingeschränkt und für jeden Zweck einzusetzen.}};
+			\draw[can] (freedom) -> (run);
 		}
 	
 		\visible<3-> {
-			\node[box, above right of = freedom] {Verstehen\only<handout>{\\Die Freiheit, die Funktionsweise der Software untersuchen und verstehen zu können.}};
+			\node[box, above left of = freedom] (study) {Verstehen\only<handout>{\\Die Freiheit, die Funktionsweise der Software untersuchen und verstehen zu können.}};
+			\draw[can]  (freedom) -> (study);
 		}
 	
 		\visible<4-> {
-			\node[box, below left of = freedom] {Verbreiten\only<handout>{\\Die Freiheit, Kopien der Software zu verbreiten, um damit seinen Mitmenschen zu helfen.}};
+			\node[box, below left of = freedom] (redistribute) {Verbreiten\only<handout>{\\Die Freiheit, Kopien der Software zu verbreiten, um damit seinen Mitmenschen zu helfen.}};
+			\draw[can]  (freedom) -> (redistribute);
 		}
 	
 		\visible<5-> {
-			\node[box, below right of = freedom] {Verbessern\only<handout>{\\Die Freiheit, die Software zu verbessern und die Verbesserungen an die Öffentlichkeit weiterzugeben, sodass die gesamte Gesellschaft davon profitieren kann.}};
+			\node[box, below right of = freedom] (improve) {Verbessern\only<handout>{\\Die Freiheit, die Software zu verbessern und die Verbesserungen an die Öffentlichkeit weiterzugeben, sodass die gesamte Gesellschaft davon profitieren kann.}};
+			\draw[can]  (freedom) -> (improve);
 		}
 	
 		\end{tikzpicture}
@@ -46,11 +50,11 @@
 \begin{frame}{Frei und Kommerziell}
 	\begin{center}
 		\begin{tabular}{c|c|c|}
-			 & \thead{proprietär} &  \thead{frei} \\ 
+			 & \visible<3->{\thead{proprietär}} & \visible<2->{\thead{frei}} \\ 
 			\hline 
-			\thead{kommerziell} & \makecell{Windows\\Mac OS} & \makecell{Red Hat Enterprise\\Linux (RHEL)}\\ 
+			\visible<4->{\thead{gratis}} & \visible<5->{\makecell{(iOS)\\Freeware}} & \visible<7->{\makecell{Debian\\GNU/Linux}}\\ 
 			\hline 
-			\thead{gratis} & \makecell{(iOS)\\Freeware} & \makecell{Debian} \\ 
+			\visible<4->{\thead{kommerziell}} & \visible<6->{\makecell{Windows\\Mac OS}} & \visible<8->{\makecell{Red Hat Enterprise\\Linux}}\\ 
 			\hline 
 		\end{tabular} 
 	\end{center}
@@ -58,11 +62,11 @@
 
 \begin{frame}{Intellectual Property (IP)}
 	\begin{center}
-		Geistiges Eigentum
+		\visible<2->{\large Geistiges Eigentum}
 		\begin{tabular}{ccc}
 		\hspace{3cm} & \hspace{3cm} & \hspace{3cm} \\
-		Patent & Markenrecht & Urheberrecht \\ 
-		\includegraphics[height=2cm]{res/tulipan-Pharmaceutical-carton.pdf} & \includegraphics[height=2.5cm]{res/gnu-head.pdf} & \includegraphics[height=2.5cm]{res/turtles.jpg} \\ 
+		\visible<3->{Patent} & \visible<4->{Markenrecht} & \visible<5->{Urheberrecht} \\ 
+		\visible<3->{\includegraphics[height=2cm]{res/tulipan-Pharmaceutical-carton.pdf}} & \visible<4->{\includegraphics[height=2.5cm]{res/gnu-head.pdf}} & \visible<5->{\includegraphics[height=2.5cm]{res/turtles.jpg}} \\ 
 		\only<handout>
 		{
 			Auf Antrag & Auf Antrag & automatisch \\
