@@ -19,13 +19,13 @@
 
 \begin{frame}{Frei mit Proprietär: Betriebssystem}
 	\begin{center}
-		\only<1>{
+		\only<1|handout:0>{
 			\includegraphics[width=0.4\textwidth]{res/propritary-on-os-base.pdf}
 		}
-		\only<2>{
+		\only<2|handout:0>{
 			\includegraphics[width=0.4\textwidth]{res/propritary-on-os-app.pdf}
 		}
-		\only<3>{
+		\only<3|handout:1>{
 			\includegraphics[width=0.4\textwidth]{res/propritary-on-os-all.pdf}
 		}
 	\end{center}
@@ -41,22 +41,22 @@
 \begin{frame}{Frei mit Proprietär: Library}
 	\begin{multicols}{2}
 		\begin{center}
-			\only<2>{
+			\only<2|handout:0>{
 				\includegraphics[width=0.4\textwidth]{res/propritary-dynamic-linking-base.pdf}
 			}
-			\only<3>{
+			\only<3|handout:0>{
 				\includegraphics[width=0.4\textwidth]{res/propritary-dynamic-linking-nocopyleft.pdf}
 			}
-			\only<4->{
+			\only<4-|handout:1>{
 				\includegraphics[width=0.4\textwidth]{res/propritary-dynamic-linking-lgpl.pdf}
 			}
 		\end{center}
 		\pagebreak
 		\begin{center}
-			\only<5>{
+			\only<5|handout:0>{
 				\includegraphics[width=0.4\textwidth]{res/propritary-static-linking-base.pdf}
 			}
-			\only<6->{
+			\only<6-|handout:1>{
 				\includegraphics[width=0.4\textwidth]{res/propritary-static-linking-nocopyleft.pdf}
 			}
 		\end{center}
@@ -73,19 +73,19 @@
 \begin{frame}{Frei mit Proprietär: Code Übernahme}
 	\begin{multicols}{2}
 		\begin{center}
-			\only<2>{
+			\only<2|handout:0>{
 				\includegraphics[width=0.4\textwidth]{res/propritary-use-code-base.pdf}
 			}
-			\only<3->{
+			\only<3-|handout:1>{
 				\includegraphics[width=0.4\textwidth]{res/propritary-use-code-nocopyleft.pdf}
 			}
 		\end{center}
 		\pagebreak
 		\begin{center}
-			\only<4>{
+			\only<4|handout:0>{
 				\includegraphics[width=0.4\textwidth]{res/propritary-cloud-base.pdf}
 			}
-			\only<5->{
+			\only<5-|handout:1>{
 				\includegraphics[width=0.4\textwidth]{res/propritary-cloud-agpl.pdf}
 			}
 		\end{center}
@@ -96,6 +96,7 @@
 	\begin{itemize}
 		\item Verwenden in proprietärem Code: nur Public-Domain oder permissive Lizenzen
 		\item Code unter Copyleft darf nicht in proprietärer Applikation verwendet werden\footnote{ausser wenn ausschliesslich intern gebraucht, dann ist es Freie Software}
+		\item Wird Software als Service zur Verfügung gestellt muss der Copyleft Quelltext nicht zur Verfügung gestellt werden. Die AGPL schliesst diese Lücke. (\url{https://de.wikipedia.org/wiki/GNU\_Affero\_General\_Public\_License})
 	\end{itemize}
 }
 
@@ -133,25 +134,16 @@
 }
 
 \begin{frame}{Deklaration der Lizenz}
-	\only<beamer:0|handout:1>
-	{
-	\begin{itemize}
-		\item im Projekt (COPYING)
-		\item in den Files (SPDX)
-		\item in dem Binary (Inkscape)
-		\item Keine Lizenz: Code darf nicht benutzt werden
-	\end{itemize}
-	}
 	\begin{center}
-		\only<2|handout:2>
+		\only<2|handout:1>
 		{
 			\includegraphics[width=\textwidth]{res/lizenz-source.png}
 		}
-		\only<3|handout:3>
+		\only<3|handout:2>
 		{
 			\includegraphics[width=\textwidth]{res/lizenz-file.png}
 		}
-		\only<4|handout:4>
+		\only<4|handout:3>
 		{
 			\includegraphics[height=6cm]{res/lizenz-binary.png}
 		}
@@ -161,8 +153,8 @@
 {
 	\begin{itemize}
 		\item im Projekt (COPYING)
-		\item in den Files (SPDX)
-		\item in dem Binary (Inkscape)
+		\item in den Files (Header, SPDX)
+		\item in dem Binary (About Dialog, Info Option in CLI Applikationen)
 		\item Keine Lizenz: Code darf nicht benutzt werden
 	\end{itemize}
 }
@@ -179,6 +171,13 @@
 		\end{center}
 	}
 \end{frame}
+\note
+{
+	\begin{itemize}
+		\item Source des Programms muss in der gleichen Version zur Verfügung stehen
+		\item Besser noch wenn Entwicklung offen und Zugriff auf Source Versionskontrolle besteht
+	\end{itemize}
+}
 
 \begin{frame}{Verteidigung des eigenen Codes}
 	\begin{itemize}
@@ -188,5 +187,8 @@
 \end{frame}
 \note
 {
-  \url{https://en.wikipedia.org/wiki/Gpl-violations.org}
+	\begin{itemize}
+		\item \url{https://en.wikipedia.org/wiki/Gpl-violations.org}
+		\item Erfolge vor Gericht
+	\end{itemize}
 }
