@@ -6,32 +6,27 @@
 \label{sec:handhabung}
 \subsectionframe
 
-\begin{frame}{Rechte am Code}
-	\pause
-	\begin{itemize}
-		\item Besitzt man die Rechte?
-		\pause
-		\begin{itemize}
-			\item Anstellungsvertrag
-			\item Contributor License Agreement
-		\end{itemize}
-		\pause
-		\item Besitzer darf mit Code machen was er will
-	\end{itemize}
-\end{frame}
-
 \begin{frame}{Frei mit Proprietär: Betriebssystem}
-	\begin{center}
-		\only<1|handout:0>{
+	\only<2|handout:0>{
+		\begin{center}
 			\includegraphics[width=0.4\textwidth]{res/propritary-on-os-base.pdf}
-		}
-		\only<2|handout:0>{
+		\end{center}
+	}
+	\only<3|handout:0>{
+		\begin{center}
 			\includegraphics[width=0.4\textwidth]{res/propritary-on-os-app.pdf}
-		}
-		\only<3|handout:1>{
-			\includegraphics[width=0.4\textwidth]{res/propritary-on-os-all.pdf}
-		}
-	\end{center}
+		\end{center}
+	}
+	\only<4|handout:0>{
+		\begin{center}
+			\includegraphics[width=0.4\textwidth]{res/propritary-on-os-permissive.pdf}
+		\end{center}
+	}
+	\only<5|handout:1>{
+		\begin{center}
+			\includegraphics[width=0.4\textwidth]{res/propritary-on-os-copyleft.pdf}
+		\end{center}
+	}
 \end{frame}
 \note
 {
@@ -43,26 +38,47 @@
 
 \begin{frame}{Frei mit Proprietär: Library}
 	\begin{multicols}{2}
-		\begin{center}
-			\only<2|handout:0>{
+		\only<2|handout:0>{
+			\begin{center}
 				\includegraphics[width=0.4\textwidth]{res/propritary-dynamic-linking-base.pdf}
-			}
-			\only<3|handout:0>{
-				\includegraphics[width=0.4\textwidth]{res/propritary-dynamic-linking-nocopyleft.pdf}
-			}
-			\only<4-|handout:1>{
+			\end{center}
+		}
+		\only<3|handout:0>{
+			\begin{center}
+				\includegraphics[width=0.4\textwidth]{res/propritary-dynamic-linking-permissive.pdf}
+			\end{center}
+		}
+		\only<4|handout:0>{
+			\begin{center}
+				\includegraphics[width=0.4\textwidth]{res/propritary-dynamic-linking-copyleft.pdf}
+			\end{center}
+		}
+		\only<5-|handout:1>{
+			\begin{center}
 				\includegraphics[width=0.4\textwidth]{res/propritary-dynamic-linking-lgpl.pdf}
-			}
-		\end{center}
+			\end{center}
+		}
 		\pagebreak
-		\begin{center}
-			\only<5|handout:0>{
+		\only<6|handout:0>{
+			\begin{center}
 				\includegraphics[width=0.4\textwidth]{res/propritary-static-linking-base.pdf}
-			}
-			\only<6-|handout:1>{
-				\includegraphics[width=0.4\textwidth]{res/propritary-static-linking-nocopyleft.pdf}
-			}
-		\end{center}
+			\end{center}
+		}
+		\only<7|handout:0>{
+			\begin{center}
+				\includegraphics[width=0.4\textwidth]{res/propritary-static-linking-permissive.pdf}
+			\end{center}
+		}
+		\only<8|handout:0>{
+			\begin{center}
+				\includegraphics[width=0.4\textwidth]{res/propritary-static-linking-copyleft.pdf}
+			\end{center}
+		}
+		\only<9-|handout:1>{
+			\begin{center}
+				\includegraphics[width=0.4\textwidth]{res/propritary-static-linking-lgpl.pdf}
+			\end{center}
+		}
 	\end{multicols}
 \end{frame}
 \note
@@ -79,19 +95,34 @@
 			\only<2|handout:0>{
 				\includegraphics[width=0.4\textwidth]{res/propritary-use-code-base.pdf}
 			}
-			\only<3-|handout:1>{
-				\includegraphics[width=0.4\textwidth]{res/propritary-use-code-nocopyleft.pdf}
+			\only<3|handout:0>{
+				\includegraphics[width=0.4\textwidth]{res/propritary-use-code-permissive.pdf}
+			}
+			\only<4-|handout:1>{
+				\includegraphics[width=0.4\textwidth]{res/propritary-use-code-copyleft.pdf}
 			}
 		\end{center}
 		\pagebreak
-		\begin{center}
-			\only<4|handout:0>{
+		\only<5|handout:0>{
+			\begin{center}
 				\includegraphics[width=0.4\textwidth]{res/propritary-cloud-base.pdf}
-			}
-			\only<5-|handout:1>{
+			\end{center}
+		}
+		\only<6|handout:0>{
+			\begin{center}
+				\includegraphics[width=0.4\textwidth]{res/propritary-cloud-permissive.pdf}
+			\end{center}
+		}
+		\only<7|handout:0>{
+			\begin{center}
+				\includegraphics[width=0.4\textwidth]{res/propritary-cloud-copyleft.pdf}
+			\end{center}
+		}
+		\only<8-|handout:1>{
+			\begin{center}
 				\includegraphics[width=0.4\textwidth]{res/propritary-cloud-agpl.pdf}
-			}
-		\end{center}
+			\end{center}
+		}
 	\end{multicols}
 \end{frame}
 \note
@@ -122,17 +153,31 @@
 	\end{itemize}
 }
 
+\begin{frame}{Rechte am Code}
+	\pause
+	\begin{itemize}
+		\item Besitzer darf mit Code machen was er will
+		\pause
+		\item Besitzt man die Rechte?
+		\pause
+		\begin{itemize}
+			\item Anstellungsvertrag
+			\item Contributor License Agreement
+		\end{itemize}
+	\end{itemize}
+\end{frame}
+
 \begin{frame}{Auswahl einer Lizenz}
 	\begin{center}
 		\begin{tabular}{ccc}
-		\visible<2->{\includegraphics[width=1cm]{res/PD-icon.pdf}} & \visible<3->{\includegraphics[width=1cm]{res/by.pdf}} & \visible<4->{\includegraphics[width=1cm]{res/copyleft.pdf}} \\ 
-		\visible<2->{Public Domain} & \visible<3->{Permissiv} & \visible<4->{Copyleft} \\
-		\visible<2->{\includegraphics[width=2.8cm]{res/cc-zero.pdf}} & \visible<3->{\includegraphics[width=2.8cm]{res/mit-logo.pdf}} & \visible<4->{\includegraphics[width=2.8cm]{res/gpl-v3-logo.pdf}} \\
+		\visible<2->{\includegraphics[width=1cm]{res/PD-icon.pdf}} & \visible<4->{\includegraphics[width=1cm]{res/by.pdf}} & \visible<6->{\includegraphics[width=1cm]{res/copyleft.pdf}} \\ 
+		\visible<2->{Public Domain} & \visible<4->{Permissiv} & \visible<6->{Copyleft} \\
+		\visible<3->{\includegraphics[width=2.8cm]{res/cc-zero.pdf}} & \visible<5->{\includegraphics[width=2.8cm]{res/mit-logo.pdf}} & \visible<7->{\includegraphics[width=2.8cm]{res/gpl-v3-logo.pdf}} \\
 		\hspace{0.3\textwidth} & \hspace{0.3\textwidth} & \hspace{0.3\textwidth} \\
 		\end{tabular} 
 	\end{center}
 	\begin{itemize}
-		\visible<5->{\item \url{http://choosealicense.com/}}
+		\visible<8->{\item \url{http://choosealicense.com/}}
 	\end{itemize}
 	\vspace{1cm}
 \end{frame}
