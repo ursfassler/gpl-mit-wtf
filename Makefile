@@ -1,30 +1,34 @@
+# (C) Copyright 2016
+# Urs Fässler, www.bitzgi.ch
+# SPDX-License-Identifier: CC-BY-SA-4.0
 
 handname=handout
 slidename=slide
-bibname=literature
 pdfname=gpl_mit_wtf
 
+slidetex=$(slidename).tex
+handouttex=$(handname).tex
+slidepdf=$(pdfname)_$(slidename).pdf
+handoutpdf=$(pdfname)_$(handname).pdf
+
 merged: handout slide
-	gs -q -dNOPAUSE -dBATCH -sDEVICE=pdfwrite -sOutputFile=$(pdfname).pdf $(pdfname)_$(slidename).pdf $(pdfname)_$(handname).pdf
+	gs -q -dNOPAUSE -dBATCH -sDEVICE=pdfwrite -sOutputFile=$(pdfname).pdf $(handoutpdf) $(slidepdf)
 
 handout:
-	pdflatex -draftmode -halt-on-error $(handname).tex 1> /dev/null
-	bibtex $(handname) 1> /dev/null
-	pdflatex -draftmode -halt-on-error $(handname).tex 1> /dev/null
-	pdflatex -halt-on-error $(handname).tex 1> /dev/null
-	mv $(handname).pdf $(pdfname)_$(handname).pdf
+	pdflatex -draftmode -halt-on-error $(handouttex) 1> /dev/null
+	pdflatex -halt-on-error $(handouttex) 1> /dev/null
+	mv $(handname).pdf $(handoutpdf)
 
 slide:
-	pdflatex -draftmode -halt-on-error $(slidename).tex 1> /dev/null
-	pdflatex -halt-on-error $(slidename).tex 1> /dev/null
-	mv $(slidename).pdf $(pdfname)_$(slidename).pdf
+	pdflatex -draftmode -halt-on-error $(slidetex) 1> /dev/null
+	pdflatex -halt-on-error $(slidetex) 1> /dev/null
+	mv $(slidename).pdf $(slidepdf)
 
 debug:
-	pdflatex $(handname).tex
-
+	pdflatex $(handouttex)
 
 clean:
-	rm -f $(bibname)-blx.bib *.log *.toc *.aux *.bbl *.blg *.lof *.lot *.out *.bak *.nav *.snm *.vrb
+	rm -f *.log *.toc *.aux *.bbl *.blg *.lof *.lot *.out *.bak *.nav *.snm *.vrb
 
 clear: 
 	rm -f *.dvi *.pdf *.ps

@@ -12,7 +12,7 @@
 		[
 			node distance = 3 cm,
 			box/.style = {thick, draw=black, top color=white, bottom color=lightblue, rounded corners, align=center, inner sep = 0.5cm},
-			can/.style={->, very thick, shorten <=0.2cm, shorten >=0.2cm,}
+			can/.style={->, very thick, shorten <=0.2cm, shorten >=0.2cm}
 		]
 		
 		\visible<1-> {
@@ -20,22 +20,22 @@
 		}
 		
 		\visible<2-> {
-			\node[box, above right of = freedom] (run) {Verwenden\only<handout>{\\Die Freiheit, die Software uneingeschränkt und für jeden Zweck einzusetzen.}};
+			\node[box, above right of = freedom] (run) {\only<handout>{1. }Verwenden};
 			\draw[can] (freedom) -> (run);
 		}
 	
 		\visible<3-> {
-			\node[box, above left of = freedom] (study) {Verstehen\only<handout>{\\Die Freiheit, die Funktionsweise der Software untersuchen und verstehen zu können.}};
+			\node[box, above left of = freedom] (study) {\only<handout>{2. }Verstehen};
 			\draw[can]  (freedom) -> (study);
 		}
 	
 		\visible<4-> {
-			\node[box, below left of = freedom] (redistribute) {Verbreiten\only<handout>{\\Die Freiheit, Kopien der Software zu verbreiten, um damit seinen Mitmenschen zu helfen.}};
+			\node[box, below left of = freedom] (redistribute) {\only<handout>{3. }Verbreiten};
 			\draw[can]  (freedom) -> (redistribute);
 		}
 	
 		\visible<5-> {
-			\node[box, below right of = freedom] (improve) {Verbessern\only<handout>{\\Die Freiheit, die Software zu verbessern und die Verbesserungen an die Öffentlichkeit weiterzugeben, sodass die gesamte Gesellschaft davon profitieren kann.}};
+			\node[box, below right of = freedom] (improve) {\only<handout>{4. }Verbessern};
 			\draw[can]  (freedom) -> (improve);
 		}
 	
@@ -44,6 +44,13 @@
 \end{frame}
 \note
 {
+	\footnotesize
+	\begin{enumerate}
+		\item Die Freiheit, die Software uneingeschränkt und für jeden Zweck einzusetzen.
+		\item Die Freiheit, die Funktionsweise der Software untersuchen und verstehen zu können.
+		\item Die Freiheit, Kopien der Software zu verbreiten, um damit seinen Mitmenschen zu helfen.
+		\item Die Freiheit, die Software zu verbessern und die Verbesserungen an die Öffentlichkeit weiterzugeben, sodass die gesamte Gesellschaft davon profitieren kann.
+	\end{enumerate}
 	\url{http://www.inf-schule.de/software/freie\_software/02\_freiheiten\_freier\_software}
 }
 
@@ -52,9 +59,9 @@
 		\begin{tabular}{c|c|c|}
 			 & \visible<3->{\thead{proprietär}} & \visible<2->{\thead{frei}} \\ 
 			\hline 
-			\visible<4->{\thead{gratis}} & \visible<6->{\makecell{(iOS)\\Freeware}} & \visible<7->{\makecell{Debian\\GNU/Linux}}\\ 
+			\visible<4->{\thead{gratis}} & \visible<7->{\makecell{(iOS)\\Freeware}} & \visible<5->{\makecell{Debian\\GNU/Linux}}\\ 
 			\hline 
-			\visible<4->{\thead{kommerziell}} & \visible<5->{\makecell{Windows\\Mac OS}} & \visible<8->{\makecell{Red Hat Enterprise\\Linux}}\\ 
+			\visible<4->{\thead{kommerziell}} & \visible<6->{\makecell{Windows\\Mac OS}} & \visible<8->{\makecell{Red Hat Enterprise\\Linux}}\\ 
 			\hline 
 		\end{tabular} 
 	\end{center}
@@ -69,9 +76,9 @@
 		\visible<3->{\includegraphics[height=2cm]{res/tulipan-Pharmaceutical-carton.pdf}} & \visible<4->{\includegraphics[height=2.5cm]{res/gnu-head.pdf}} & \visible<5->{\includegraphics[height=2.5cm]{res/turtles.jpg}} \\ 
 		\only<handout>
 		{
-			Auf Antrag & Auf Antrag & automatisch \\
-			\makecell{Schutz der\\Investition} & \makecell{Schutz von\\Erkennungsmerkmal} & \makecell{Verwertungsrecht\\künstlerischer\\Schöpfungen} \\
-			20 Jahre & beliebig erneuerbar & 70 Jahre nach Tod \\
+			\small Auf Antrag & \small Auf Antrag & \small automatisch \\
+			\small\makecell{Schutz der\\Investition} & \small\makecell{Schutz von\\Erkennungsmerkmal} & \small\makecell{Verwertungsrecht\\künstlerischer\\Schöpfungen} \\
+			\small 20 Jahre & \small beliebig erneuerbar & \small 70 Jahre nach Tod \\
 		}
 		\end{tabular} 
 	\end{center}

@@ -4,17 +4,15 @@
 
 \section{Backup}
 
-
-\input{outro}
-
 \begin{frame}{FLOSS}
-	\todo{Farben}\\
 	\begin{center}
 		\begin{tikzpicture}
 		[
 			node distance = 2 cm,
-			box/.style = {thick, draw=black, fill=red, align=center, inner sep = 0.25cm},
-			background/.style = {draw=blue},
+			basenode/.style = {thick, draw=black, rounded corners, align=center, inner sep = 0.25cm},
+			box/.style = {basenode, top color=white, bottom color=lightblue},
+			backbox/.style = {basenode, fill=lightblue!50},
+			property/.style={->, very thick, shorten >=0.1cm}
 		]
 		\small
 
@@ -29,15 +27,15 @@
 		}
 		\visible<3->{
 			\node[box, above left of = free] (user) {Anwender};
-			\draw (free) -- (user);
+			\draw[property] (free) -- (user);
 			\node[box, above right of = free] (community) {Gesellschaft};
-			\draw (free) -- (community);
+			\draw[property] (free) -- (community);
 		}
 		\visible<4->{
 			\node[box, below left of = free] (ethical) {ethisch};
-			\draw (free) -- (ethical);
+			\draw[property] (free) -- (ethical);
 			\node[box, below right of = free] (social) {sozial};
-			\draw (free) -- (social);
+			\draw[property] (free) -- (social);
 		}
 
 		\visible<5->{
@@ -45,19 +43,19 @@
 		}
 		\visible<6->{
 			\node[box, above left of = open] (developer) {Entwickler};
-			\draw (open) -- (developer);
+			\draw[property] (open) -- (developer);
 			\node[box, above right of = open] (business) {Business};
-			\draw (open) -- (business);
+			\draw[property] (open) -- (business);
 		}
 		\visible<7->{
 			\node[box, below left of = open] (practical) {praktisch};
-			\draw (open) -- (practical);
+			\draw[property] (open) -- (practical);
 			\node[box, below right of = open] (pragmatic) {pragmatisch};
-			\draw (open) -- (pragmatic);
+			\draw[property] (open) -- (pragmatic);
 		}
 
 		\begin{pgfonlayer}{background} 
-			\node[box] [fit = (floss) (free) (open) (user) (community) (ethical) (social) (developer) (business) (practical) (pragmatic)] {};
+			\node[backbox] [fit = (floss) (free) (open) (user) (community) (ethical) (social) (developer) (business) (practical) (pragmatic)] {};
 		\end{pgfonlayer}
 		
 		\end{tikzpicture}
@@ -122,7 +120,7 @@
 	\\
 		Public Domain
 		&
-		Nachgiebig
+		Permissiv
 		&
 		Copyleft
 	\end{tabular} 
@@ -143,11 +141,4 @@
 		\item einfach Kontaktierbar
 		\item nett sein
 	\end{itemize}
-\end{frame}
-
-\section{Literatur \& Bild-Nachweise}
-\begin{frame}[allowframebreaks]{Literature}
-	\tiny{
-		\bibliography{literature}
-	}
 \end{frame}
