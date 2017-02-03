@@ -55,12 +55,14 @@
 }
 
 \begin{frame}
+\begin{adjustwidth}{-2.5em}{-2.5em}
 	\begin{center}
 		\begin{tikzpicture}
 		[
-			node distance = 2 cm,
+			node distance = 2.25cm,
 			basenode/.style = {thick, draw=black, rounded corners, align=center, inner sep = 0.25cm},
 			box/.style = {basenode, top color=white, bottom color=lightblue},
+			centerbox/.style = {box, minimum width=1.75cm, minimum height=1.75cm},
 			backbox/.style = {basenode, fill=lightblue!50},
 			property/.style={->, very thick, shorten >=0.1cm}
 		]
@@ -69,11 +71,11 @@
 		\node (center) {};
 
 		\visible<8->{
-			\node[box, above = 2.25cm of center] (floss) {FLOSS: Free/Libre Open Source Software};
+			\node[above = 2.5cm of center] (floss) {FLOSS: Free/Libre Open Source Software};
 		}
 
 		\visible<2->{
-			\node[box, left = 1.75cm of center] (free) {\includegraphics[height=1cm]{res/gnu-head.pdf}};
+			\node[centerbox, left = 2.25cm of center] (free) {\includegraphics[height=1.25cm]{res/gnu-head.pdf}};
 		}
 		\visible<3->{
 			\node[box, above left of = free] (user) {Anwender};
@@ -89,7 +91,7 @@
 		}
 
 		\visible<5->{
-			\node[box, right = 1.75cm of center] (open) {\includegraphics[height=1cm]{res/opensource.pdf}};
+			\node[centerbox, right = 2.25cm of center] (open) {\includegraphics[height=1.25cm]{res/opensource.pdf}};
 		}
 		\visible<6->{
 			\node[box, above left of = open] (developer) {Entwickler};
@@ -105,11 +107,14 @@
 		}
 
 		\begin{pgfonlayer}{background} 
+		\visible<8->{
 			\node[backbox] [fit = (floss) (free) (open) (user) (community) (ethical) (social) (developer) (business) (practical) (pragmatic)] {};
+		}
 		\end{pgfonlayer}
 		
 		\end{tikzpicture}
 	\end{center}
+\end{adjustwidth}
 \end{frame}
 \note
 {
