@@ -54,6 +54,72 @@
 	\url{http://www.inf-schule.de/software/freie\_software/02\_freiheiten\_freier\_software}
 }
 
+\begin{frame}
+	\begin{center}
+		\begin{tikzpicture}
+		[
+			node distance = 2 cm,
+			basenode/.style = {thick, draw=black, rounded corners, align=center, inner sep = 0.25cm},
+			box/.style = {basenode, top color=white, bottom color=lightblue},
+			backbox/.style = {basenode, fill=lightblue!50},
+			property/.style={->, very thick, shorten >=0.1cm}
+		]
+		\small
+
+		\node (center) {};
+
+		\visible<8->{
+			\node[box, above = 2.25cm of center] (floss) {FLOSS: Free/Libre Open Source Software};
+		}
+
+		\visible<2->{
+			\node[box, left = 1.75cm of center] (free) {\includegraphics[height=1cm]{res/gnu-head.pdf}};
+		}
+		\visible<3->{
+			\node[box, above left of = free] (user) {Anwender};
+			\draw[property] (free) -- (user);
+			\node[box, above right of = free] (community) {Gesellschaft};
+			\draw[property] (free) -- (community);
+		}
+		\visible<4->{
+			\node[box, below left of = free] (ethical) {ethisch};
+			\draw[property] (free) -- (ethical);
+			\node[box, below right of = free] (social) {sozial};
+			\draw[property] (free) -- (social);
+		}
+
+		\visible<5->{
+			\node[box, right = 1.75cm of center] (open) {\includegraphics[height=1cm]{res/opensource.pdf}};
+		}
+		\visible<6->{
+			\node[box, above left of = open] (developer) {Entwickler};
+			\draw[property] (open) -- (developer);
+			\node[box, above right of = open] (business) {Business};
+			\draw[property] (open) -- (business);
+		}
+		\visible<7->{
+			\node[box, below left of = open] (practical) {praktisch};
+			\draw[property] (open) -- (practical);
+			\node[box, below right of = open] (pragmatic) {pragmatisch};
+			\draw[property] (open) -- (pragmatic);
+		}
+
+		\begin{pgfonlayer}{background} 
+			\node[backbox] [fit = (floss) (free) (open) (user) (community) (ethical) (social) (developer) (business) (practical) (pragmatic)] {};
+		\end{pgfonlayer}
+		
+		\end{tikzpicture}
+	\end{center}
+\end{frame}
+\note
+{
+	\begin{itemize}
+		\item \url{https://de.wikipedia.org/wiki/Freie\_Software\#Open\_Source}
+		\item A GNU Head: CC-BY-SA Etienne Suvasa \url{https://www.gnu.org/graphics/agnuhead.html}
+		\item Logo Open Source Initiative: CC-SA Open Source Initiative official SVG \url{https://commons.wikimedia.org/wiki/File:Opensource.svg}
+	\end{itemize}
+}
+
 \begin{frame}{Frei und Kommerziell}
 	\begin{center}
 		\begin{tabular}{c|c|c|}
