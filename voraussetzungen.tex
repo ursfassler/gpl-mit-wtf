@@ -59,56 +59,40 @@
 	\begin{center}
 		\begin{tikzpicture}
 		[
-			node distance = 2.25cm,
+			node distance = 2.5cm,
 			basenode/.style = {thick, draw=black, rounded corners, align=center, inner sep = 0.25cm},
-			box/.style = {basenode, top color=white, bottom color=lightblue},
-			centerbox/.style = {box, minimum width=1.75cm, minimum height=1.75cm},
-			backbox/.style = {basenode, fill=lightblue!50},
+			box/.style = {basenode, minimum width=2.5cm, top color=white, bottom color=lightblue},
+			centerbox/.style = {box, minimum width=2.5cm, minimum height=2.5cm},
+			backbox/.style = {basenode, fill=lightblue!50, inner sep = .5cm},
 			property/.style={->, very thick, shorten >=0.1cm}
 		]
 		\small
 
 		\node (center) {};
 
-		\visible<8->{
-			\node[above = 2.5cm of center] (floss) {FLOSS: Free/Libre Open Source Software};
+		\visible<4->{
+			\node[above of = center] (floss) {FLOSS: Free/Libre Open Source Software};
 		}
 
+		\visible<1->{
+			\node[centerbox, left of = center] (free) {\includegraphics[height=1.75cm]{res/gnu-head.pdf}};
+		}
 		\visible<2->{
-			\node[centerbox, left = 2.25cm of center] (free) {\includegraphics[height=1.25cm]{res/gnu-head.pdf}};
+			\node[box, below of = free] (user) {Anwender};
+			\draw[property] (free) -- (user);
+		}
+
+		\visible<1->{
+			\node[centerbox, right of = center] (open) {\includegraphics[height=1.75cm]{res/opensource.pdf}};
 		}
 		\visible<3->{
-			\node[box, above left of = free] (user) {Anwender};
-			\draw[property] (free) -- (user);
-			\node[box, above right of = free] (community) {Gesellschaft};
-			\draw[property] (free) -- (community);
-		}
-		\visible<4->{
-			\node[box, below left of = free] (ethical) {ethisch};
-			\draw[property] (free) -- (ethical);
-			\node[box, below right of = free] (social) {sozial};
-			\draw[property] (free) -- (social);
-		}
-
-		\visible<5->{
-			\node[centerbox, right = 2.25cm of center] (open) {\includegraphics[height=1.25cm]{res/opensource.pdf}};
-		}
-		\visible<6->{
-			\node[box, above left of = open] (developer) {Entwickler};
+			\node[box, below of = open] (developer) {Entwickler};
 			\draw[property] (open) -- (developer);
-			\node[box, above right of = open] (business) {Business};
-			\draw[property] (open) -- (business);
-		}
-		\visible<7->{
-			\node[box, below left of = open] (practical) {praktisch};
-			\draw[property] (open) -- (practical);
-			\node[box, below right of = open] (pragmatic) {pragmatisch};
-			\draw[property] (open) -- (pragmatic);
 		}
 
 		\begin{pgfonlayer}{background} 
-		\visible<8->{
-			\node[backbox] [fit = (floss) (free) (open) (user) (community) (ethical) (social) (developer) (business) (practical) (pragmatic)] {};
+		\visible<4->{
+			\node[backbox] [fit = (floss) (free) (open) (user) (developer)] {};
 		}
 		\end{pgfonlayer}
 		
@@ -130,9 +114,9 @@
 		\begin{tabular}{c|c|c|}
 			 & \visible<3->{\thead{\includegraphics[width=1.5cm]{res/open-handcuffs.pdf}\\proprietär}} & \visible<2->{\thead{\includegraphics[width=1.5cm]{res/gnu-head.pdf}\\frei}} \\ 
 			\hline 
-			\visible<4->{\thead{gratis}} & \visible<7->{\makecell{(iOS)\\Freeware}} & \visible<5->{\makecell{Debian\\GNU/Linux}}\\ 
+			\visible<4->{\thead{gratis}} & \visible<7->{\makecell{MacOS X}} & \visible<5->{\makecell{Debian\\GNU/Linux}}\\ 
 			\hline 
-			\visible<4->{\thead{kommerziell}} & \visible<6->{\makecell{Windows\\Mac OS}} & \visible<8->{\makecell{Red Hat Enterprise\\Linux}}\\ 
+			\visible<4->{\thead{kommerziell}} & \visible<6->{\makecell{Windows}} & \visible<8->{\makecell{Red Hat Enterprise\\Linux}}\\ 
 			\hline 
 		\end{tabular} 
 	\end{center}
